@@ -1,3 +1,10 @@
-<p>
-  parent works!
-</p>
+<input type="text" [(ngModel)]="name">
+<input type="text" [(ngModel)]="age">
+<span>父组件名字是:{{name}},年龄是{{age}}</span>
+<h3>子组件传回的值:{{childABackName}}</h3>
+<hr>
+<app-child-a [childAname]="name" [childAage]="age" (backName)="handleBackName($event)"></app-child-a>
+
+<hr>
+
+<app-child-b></app-child-b>

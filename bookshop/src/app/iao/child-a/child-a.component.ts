@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child-a',
   templateUrl: './child-a.component.html',
   styleUrls: ['./child-a.component.css']
 })
-export class ChildAComponent implements OnInit {
+export class ChildAComponent{
 
-  constructor() { }
+@Input()
+childAname:string;
+@Input()
+childAage:string;
 
-  ngOnInit() {
-  }
+@Output()
+backName:EventEmitter<string> = new EventEmitter<string>();
+
+sendBack(){
+  this.backName.emit(this.childAname.toUpperCase());
+console.log("123");
+}
+
 
 }

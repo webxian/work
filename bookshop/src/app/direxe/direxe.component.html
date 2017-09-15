@@ -1,4 +1,9 @@
+<div>
+  <input type="text" placeholder="用户名" [(ngModel)]="key">
+</div>
 
+
+<hr>
 <div>
   <input type="text" placeholder="用户名" [(ngModel)]="username">
   <input type="text" placeholder="密码" [(ngModel)]="password" >
@@ -21,7 +26,8 @@
     <th>操作</th>
   </tr>
 </thead>
-  <tr *ngFor="let item of users ; index as i">
+  <tr *ngFor="let item of users |datafilter : key ; index as i ">
+  <!-- <tr *ngFor="let item of users ; index as i ">     -->
     <td>{{item.username}}</td>
     <td>{{item.password}}</td>
     <td>{{item.age}}</td>

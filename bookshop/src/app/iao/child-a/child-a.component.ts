@@ -17,7 +17,6 @@ backName:EventEmitter<string> = new EventEmitter<string>();
 
 sendBack(){
   this.backName.emit(this.childAname.toUpperCase());
-console.log("123");
 }
 
 

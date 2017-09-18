@@ -17,6 +17,8 @@ import { VoteComponent } from './homework/vote/vote.component';
 import { VoteItemComponent } from './homework/vote-item/vote-item.component';
 import { TemplateFormComponent } from './forms/template-form/template-form.component';
 import { ReativeFormComponent } from './forms/reative-form/reative-form.component';
+import { ItemComponent } from './item/item.component';
+import { StarComponent } from './star/star.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { ReativeFormComponent } from './forms/reative-form/reative-form.componen
     VoteComponent,
     VoteItemComponent,
     TemplateFormComponent,
-    ReativeFormComponent
+    ReativeFormComponent,
+    ItemComponent,
+    StarComponent
   ],
   imports: [
     BrowserModule,

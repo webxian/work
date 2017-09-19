@@ -19,6 +19,9 @@ import { TemplateFormComponent } from './forms/template-form/template-form.compo
 import { ReativeFormComponent } from './forms/reative-form/reative-form.component';
 import { ItemComponent } from './item/item.component';
 import { StarComponent } from './star/star.component';
+import { SomeComponent } from './math/some/some.component';
+import { MathService } from './math/math.service';
+import { MathplusService } from './math/mathplus.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,8 @@ import { StarComponent } from './star/star.component';
     TemplateFormComponent,
     ReativeFormComponent,
     ItemComponent,
-    StarComponent
+    StarComponent,
+    SomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,10 @@ import { StarComponent } from './star/star.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ 
+    {provide:MathService,useClass:MathplusService},
+  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

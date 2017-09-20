@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { JsonpModule, HttpModule } from '@angular/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +24,8 @@ import { StarComponent } from './star/star.component';
 import { SomeComponent } from './math/some/some.component';
 import { MathService } from './math/math.service';
 import { MathplusService } from './math/mathplus.service';
+import { HttpComponent } from './http/http.component';
+
 
 @NgModule({
   declarations: [
@@ -42,12 +46,15 @@ import { MathplusService } from './math/mathplus.service';
     ItemComponent,
     StarComponent,
     SomeComponent,
+    HttpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule,
+    JsonpModule
   ],
   providers: [ 
     {provide:MathService,useClass:MathplusService},

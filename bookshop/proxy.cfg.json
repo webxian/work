@@ -1,0 +1,16 @@
+{
+    "/openapi":{
+        "target":"http://www.tuling123.com"
+    },
+    "/189":{
+        "target":{
+            "host":"op.juhe.cn",
+            "protocol":"http:",
+            "port":80
+        },
+        "changeOrigin":true
+    }
+
+
+
+}

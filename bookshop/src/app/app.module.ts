@@ -25,6 +25,10 @@ import { SomeComponent } from './math/some/some.component';
 import { MathService } from './math/math.service';
 import { MathplusService } from './math/mathplus.service';
 import { HttpComponent } from './http/http.component';
+import { LoginComponent } from './route/login/login.component';
+import { MainComponent } from './route/main/main.component';
+import { RegistComponent } from './route/regist/regist.component';
+import { AboutusComponent } from './route/aboutus/aboutus.component';
 
 
 @NgModule({
@@ -46,7 +50,11 @@ import { HttpComponent } from './http/http.component';
     ItemComponent,
     StarComponent,
     SomeComponent,
-    HttpComponent
+    HttpComponent,
+    LoginComponent,
+    MainComponent,
+    RegistComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,
